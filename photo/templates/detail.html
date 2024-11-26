@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Photo Detail{% endblock %}
+{% block title %}投稿{% endblock %}
 
       {% block contents %}
 
@@ -16,7 +16,7 @@
             <p>{{object.comment}}</p>
             <br>
 
-            <p>{{object.posted_at}}に投稿</p>
+            <p>{{object.posted_at}}にフイート</p>
 
             <p><img src="{{ object.image1.url }}"></img></p>
 
@@ -30,14 +30,6 @@
             <a href="{% url 'photo:photo_delete' object.pk %}"
                class="btn btn-primary my-2">削除する</a>
             {% endif %}
-            
-            {% if request.user == object.user %}
-            <form method="POST">
-
-            <a href="{% url 'photo:photo_delete' object.pk %}"
-               class="btn btn-primary my-2">削除する</a>
-            {% endif %}
-            
           </dv>
         </dv>
       </dv>

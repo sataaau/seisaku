@@ -52,7 +52,7 @@ class PhotoPost(models.Model):
         )
 
     posted_at = models.DateTimeField(
-        verbose_name='投稿日時',
+        verbose_name='日時',
         auto_now_add=True
         )
     

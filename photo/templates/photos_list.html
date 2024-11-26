@@ -31,12 +31,13 @@
                 <button type="button"
                         class="btn btn-sm btn-outline-secondary"
 onclick="location.href='{% url 'photo:photo_detail' record.pk %}'">
-                        View</button>
+                        投稿を見る</button>
 
                 <button type="button"
                         class="btn btn-sm btn-outline-secondary"
 onclick="location.href='{% url 'photo:photos_cat' category=record.category.id %}'">
                         {{record.category.title}}</button>
+                            
               </div>
 
               <a href="{% url 'photo:user_list' user=record.user.id %}">
